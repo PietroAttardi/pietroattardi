@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Mazzo {
   ArrayList<Carta> mazzo;
+  int index = 0; //ultima carta disponibile per essere pescata
 
 
   public Mazzo(){ // 40 carte siciliane
@@ -35,18 +36,15 @@ public class Mazzo {
 
   public void distribuisci(Giocatore g1, Giocatore g2){ // inizio partita
     for(int i = 0; i<3; i++){
-      g1.mano.add(this.mazzo.get(0));
-      this.mazzo.remove(0);
-      g2.mano.add(this.mazzo.get(0));
-      this.mazzo.remove(0);
+      g1.mano.add(this.mazzo.get(this.index++));
+      g2.mano.add(this.mazzo.get(this.index++));
     }
 
   }
 
   public void distribuisci(Giocatore g){
-    if(this.mazzo.size() > 0){
-      g.mano.add(this.mazzo.get(0));
-      this.mazzo.remove(0);
+    if(this.index<this.mazzo.size()){
+      g.mano.add(this.mazzo.get(this.index++));
     }
   }
 
