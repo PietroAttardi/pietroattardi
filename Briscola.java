@@ -21,7 +21,7 @@ public class Briscola {
       }
     }
     Giocatore cpu = new CPU();
-    System.out.println("\t Benvenuto "+giocatore.getNick());
+    System.out.println("\tBenvenuto "+giocatore.getNick());
 
     Giocatore primoGiocatore = giocatore;
     Giocatore secondoGiocatore = cpu;
