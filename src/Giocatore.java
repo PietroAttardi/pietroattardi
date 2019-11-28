@@ -49,7 +49,7 @@ public class Giocatore {
 
 
       }
-      catch(InputMismatchException | IndexOutOfBoundsException ex){
+      catch(NoSuchElementException | IndexOutOfBoundsException ex){
         System.out.println("Scelta non valida. Riprova.");
       }
     }
