@@ -1,5 +1,5 @@
-package giochicarte.briscola;
-import giochicarte.briscola.*;
+package src;
+import src.*;
 import java.util.*;
 
 public class Mazzo {

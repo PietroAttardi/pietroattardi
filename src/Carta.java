@@ -1,4 +1,4 @@
-package giochicarte.briscola;
+package src;
 public class Carta {
   String nome;
   String seme;

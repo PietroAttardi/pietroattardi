@@ -1,5 +1,5 @@
-package giochicarte.briscola;
-import giochicarte.briscola.*;
+package src;
+import src.*;
 
 public class CPU extends Giocatore {
 
