@@ -8,8 +8,18 @@ public class Briscola {
     System.out.println("\t *** Benvenuto nel gioco della Briscola ***");
     System.out.println("Scegli il tuo nickname: ");
     System.out.print(">> ");
-    Scanner in = new Scanner(System.in);
-    Giocatore giocatore = new Giocatore(in.nextLine());
+    boolean ripeti = true;
+    Giocatore giocatore = null;
+    while(ripeti){
+      try{
+        Scanner in = new Scanner(System.in);
+        giocatore = new Giocatore(in.nextLine());
+        ripeti = false;
+      }
+      catch(NoSuchElementException ex){
+        System.out.println("Riprova...");
+      }
+    }
     Giocatore cpu = new CPU();
     System.out.println("\t Benvenuto "+giocatore.getNick());
 
