@@ -29,9 +29,9 @@ public class Mazzo {
     Collections.shuffle(this.mazzo);
   }
 
-  public String popBriscola(){
+  public Carta popBriscola(){
     Collections.swap(this.mazzo,0,39);
-    return this.mazzo.get(39).seme;
+    return this.mazzo.get(39);
   }
 
   public void distribuisci(Giocatore g1, Giocatore g2){ // inizio partita

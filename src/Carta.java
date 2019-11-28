@@ -23,6 +23,10 @@ public class Carta {
     else return Integer.parseInt(this.nome);
   }
 
+  public final String getSeme(){
+    return this.seme;
+  }
+
   public boolean isBriscola(String briscola){
     return (this.seme.equalsIgnoreCase(briscola));
   }
