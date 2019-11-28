@@ -28,18 +28,18 @@ public class Briscola {
 
     Mazzo mazzo = new Mazzo();
     mazzo.mescola();
-    String semeBriscola = mazzo.popBriscola();
+    Carta semeBriscola = mazzo.popBriscola();
     mazzo.distribuisci(primoGiocatore, secondoGiocatore);
 
     while(giocatore.getSizeMano() != 0 && cpu.getSizeMano() != 0){
       System.out.println("\n*****************************************************\n");
 
-      System.out.println("\tIl seme di briscola è: "+semeBriscola);
+      System.out.println("\tLa briscola è: "+semeBriscola);
       Carta c1 = primoGiocatore.lancia();
       System.out.println("\t"+primoGiocatore.getNick()+" ha lanciato: "+c1);
       Carta c2 = secondoGiocatore.lancia();
       System.out.println("\t"+secondoGiocatore.getNick()+" ha lanciato: "+c2);
-      boolean winner = Carta.comparaCarte(c1,c2,semeBriscola);
+      boolean winner = Carta.comparaCarte(c1,c2,semeBriscola.getSeme());
       Giocatore vincitore = (winner)? primoGiocatore : secondoGiocatore;
       System.out.println("\tVince la mano : "+ vincitore.getNick());
       if (vincitore == secondoGiocatore){
